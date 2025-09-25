@@ -13,3 +13,5 @@ df_sorted=df.sort_values(by='Order Date')
 df_sorted['com_rev']=df_sorted['Price Each'].cumsum().round(2)
 st.title('what is cmulatitave revenue from start data till and end ?')
 st.plotly_chart(px.line(df_sorted,x='Order Date',y='com_rev'))
+
+st.write("📑 Columns in dataset:", df.columns.tolist())
